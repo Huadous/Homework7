@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+td,th,table{
+  border: 1px solid black;
+}
+table {
+  border-spacing: 1px;
+}
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+.p2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+    <h1 class="p1">
+        Hello, {{name}}!
+    </h1>
+    <div class="p2">
+        Today's technology headlines are...
+    </div>
+<table style="width: 700px;">
+    <tr>
+        <th class="p2">Title</th>
+        <th class="p2">Thumbnail</th> 
+    </tr>
+    {% for i in range(5) %}
+        <tr>
+            <td>
+                <a href={{urls[i]}}>
+                    <div class="p2"> {{titles[i]}} </div>
+                </a>
+            </td>
+            <td>
+                <img src={{imgs[i]}} width="200" height="120" />
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

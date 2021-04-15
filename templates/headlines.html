@@ -1,0 +1,28 @@
+<html>
+<style>
+
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+}
+.p2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+}
+</style>
+<body>
+    <h1 class="p1">
+        Hello, {{name}}!
+    </h1>
+    <div class="p2">
+        Today's technology headlines are...
+    </div>
+    <ol>
+        {% for i in range(5) %} 
+            <li class="p2">
+                <div> {{titles[i]}} </div>
+            </li>
+        {% endfor %}
+    </ol>
+</body>
+
+</html>
