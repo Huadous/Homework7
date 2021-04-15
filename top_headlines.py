@@ -21,7 +21,6 @@ def headlines_nm(nm):
     titles = []
     for ele in topFive:
         titles.append(ele['title'])
-        urls.append(ele['url'])
     return render_template('headlines.html', name=nm, titles=titles)
 
 @app.route('/links/<nm>')
